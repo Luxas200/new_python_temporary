@@ -21,6 +21,7 @@ class Transport:
         self.available_cat = available_cat
         self.fuel_per_100_km = fuel_per_100_km
         self.fuel_price = fuel_price
+        self.fuel = True
 
 
     def check_dates(self, insurance_date, tech_inspection_date):
