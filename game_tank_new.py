@@ -40,16 +40,16 @@ class Tank:
            print()
 
     def move_tank(self, direction):
-        if direction == '<':
+        if direction == '<' and self.position[1] > 0:
             self.position = (self.position[0], self.position[1] - 1)
             self.tank_direction = '<'
-        elif direction == '>':
+        elif direction == '>' and self.position[1] < 9:
             self.position = (self.position[0], self.position[1] + 1)
             self.tank_direction = '>'
-        elif direction == '^':
+        elif direction == '^' and self.position[1] > 0:
             self.position = (self.position[0] - 1, self.position[1])
             self.tank_direction = '^'
-        elif direction == 'v':
+        elif direction == 'v' and self.position[1] < 9:
             self.position = (self.position[0] + 1, self.position[1])
             self.tank_direction = 'v'
 
