@@ -75,10 +75,10 @@ game = None
 
 while players_in_game > 0:
     player_name = input('Please enter your name: ')
+    dice = Dice([])
+    dice_side = dice.get_dices_side_number()
 
     if game is None:
-        dice = Dice([])
-        dice_side = dice.get_dices_side_number()
         game = Game(0, dice_side)
 
     game.play_game(player_name)
