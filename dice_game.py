@@ -16,7 +16,9 @@ class Dice:
             print(f' You entered: {dice_side_input}')
             self.dice_side = list(range(1, dice_side_input + 1))
             return self.dice_side
-        return print('Game over! Next time please enter valid number 1 - 100. __ Now next player!  ')
+        else:
+            print('WRONG NUMBER! Try again! Please enter valid number <<1 - 100>>')
+            return self.get_dices_side_number()
 
     def throw_dice(self):
         return random.choice(self.dice_side)
@@ -35,7 +37,9 @@ class Game(Dice):
             print(f' Here is yours  {dice_quantity_input} dices. Please throw!')
             self.dice_quantity = dice_quantity_input
             return self.dice_quantity
-        return print('Game over! Next time please enter valid number 1 - 5. __ Now next player!  ')
+        else:
+            print('WRONG NUMBER! Try again! Please enter valid number <<1 - 5>>  ')
+            return self.get_user_dices_quantity()
 
     def throw_all_dices(self):
         self.result = []
